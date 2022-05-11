@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 //activate routes
-// app.use(routes);
+app.use(routes);
 
 //switch to true when updated table relationships, reseed afterward
 sequelize.sync({ force: false }).then(() => {

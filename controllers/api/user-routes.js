@@ -5,7 +5,10 @@ const { User } = require('../../models');
 //GET all users
 router.get('/', (req, res) => {
     //accesses User model and runs .findAll() method (method from sequelize)
-    User.findAll()
+    User.findAll({
+        //prevents password info from returning with query for privacy
+        attributes: { exclude: ['password'] }
+    })
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {
         console.log(err);
@@ -16,6 +19,7 @@ router.get('/', (req, res) => {
 //GET single user by id
 router.get('/:id', (req, res) => {
     User.findOne({
+        attributes: { exclude: ['password'] },
         where: {
             id: req.params.id
         }
@@ -49,7 +53,7 @@ router.post('/', (req, res) => {
 
 //PUT update user info by id
 router.put('/:id', (req, res) => {
-    User.update({
+    User.update(req.body, {
         where: {
             id: req.params.id
         }
