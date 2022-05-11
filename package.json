@@ -1,0 +1,30 @@
+{
+  "name": "challenge-14",
+  "version": "1.0.0",
+  "description": "- for the fourteenth challenge of my bootcamp, I am tasked with creating my first full stack application with front end handlebars integration, similar to my module learning from the past week. I will utilize previous lessons to handle my mySQL tables, seeding data, adding model relationships with sequelize syntax and more.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jared-ruiz/Tech-Blog-MVC-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jared-ruiz/Tech-Blog-MVC-/issues"
+  },
+  "homepage": "https://github.com/jared-ruiz/Tech-Blog-MVC-#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.3",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.5",
+    "express-sessions": "^1.0.6",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.19.0"
+  }
+}
