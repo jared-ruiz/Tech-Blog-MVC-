@@ -2,9 +2,15 @@
 //user inherits all that Model offers
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const brcrypt = require('bcrypt');
 
 //create User
-class User extends Model {}
+class User extends Model {
+    //set up method to run on instance data (per user) to check password
+    checkPassword(loginPw) {
+        return brcrypt.compareSync(loginPw, this.password);
+    }
+}
 
 User.init(
     {
@@ -44,6 +50,23 @@ User.init(
         }
     },
     {
+        //functions called before or after calls in sequelize
+        hooks: {
+            //set up beforeCreate lifecyle "hook" 
+            //generates hashed password before User model is created
+            async beforeCreate(newUserData) {
+                newUserData.password = await brcrypt.hash(newUserData.password, 10);
+                    return newUserData;
+                },
+                //set up beforeUpdate lifecycle "hook"
+                //generates hashed password before making updated User model
+                async beforeUpdate(updatedUserData) {
+                    updatedUserData.password = await brcrypt.hash(updatedUserData.password, 10);
+                    return updatedUserData;
+                }
+            },
+            
+
         //import direct connection to database
         sequelize,
         //does not allow automatic creation of 'createdAt/updatedAt' timestamps
