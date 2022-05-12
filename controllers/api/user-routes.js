@@ -1,6 +1,6 @@
 const router = require('express').Router();
 //import user model from models file
-const { User } = require('../../models');
+const { User, Post, Comment } = require('../../models');
 
 //GET all users
 router.get('/', (req, res) => {
@@ -22,7 +22,21 @@ router.get('/:id', (req, res) => {
         attributes: { exclude: ['password'] },
         where: {
             id: req.params.id
-        }
+        },
+        include: [
+            {
+                model: Post,
+                attributes: ['id', 'title', 'post_url', 'created_at']
+            },
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'created_at'],
+                include: {
+                    model: Post,
+                    attributes: ['title']
+                }
+            }
+        ]
     })
     .then(dbUserData => {
         if(!dbUserData) {

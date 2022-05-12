@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, User } = require('../../models');
+const { Post, User, Comment } = require('../../models');
 
 //GET all posts
 router.get('/', (req, res) => {
@@ -12,6 +12,15 @@ router.get('/', (req, res) => {
                 //include User info since they are related models
                 model: User,
                 attributes: ['username']
+            },
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'user_id', 'post_id', 'created_at'],
+                //this include ataches username to the comment
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
             }
         ]
     })
@@ -33,6 +42,14 @@ router.get('/:id', (req, res) => {
             {
                 model: User,
                 attributes: ['username']
+            },
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'user_id', 'post_id', 'created_at'],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                } 
             }
         ]
     })
