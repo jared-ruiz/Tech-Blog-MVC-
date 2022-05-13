@@ -6,6 +6,9 @@ const { User, Post, Comment } = require('../models');
 const sequelize = require('../config/connection');
 
 router.get('/', (req, res) => {
+    //log session info
+    console.log(req.session);
+
     Post.findAll({
         attributes: [
             'id',
@@ -39,6 +42,16 @@ router.get('/', (req, res) => {
         console.log(err);
         res.status(500).json(err);    
     })
+})
+
+router.get('/login', (req, res) => {
+    //if already logged in, redirect to dashboard
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    //else redirect to login 
+    res.render('login');
 })
 
 module.exports = router;

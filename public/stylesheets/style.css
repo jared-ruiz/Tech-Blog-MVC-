@@ -25,14 +25,15 @@
   }
   
   button {
-    background-color: #225ca3;
+    background-color: lightcoral;
     border: 0;
     padding: 1%;
     color: white;
     font-weight: bold;
     transition: background-color .1s;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 20px;
+    width: 16.5%
   }
   
   button:hover {
@@ -101,11 +102,12 @@
     padding: 0;
     cursor: pointer;
     text-decoration: none;
-    color: #225ca3;
-    font-size: 100%;
+    color: lightcoral;
+    font-size: 25px;
+    font-family: monospace;
     font-weight: bold;
     transition: color .1s;
-    margin-left: 16px;
+    margin-right: 60px;
   }
   
   .btn-no-style:hover {
@@ -135,15 +137,6 @@
   .edit-link {
     display: block;
     margin: -1.5% 0 2% 0;
-  }
-  
-  .upvote-btn {
-    background-color: #197d0f;
-    transition: background-color .1s;
-  }
-  
-  .upvote-btn:hover {
-    background-color: #1f9c13;
   }
   
   .comment-form {
@@ -194,3 +187,18 @@
   /* #blog-title {
       color: lightseagreen
   } */
+
+  #login-style {
+    color: lightcoral;
+    font-size: 25px;
+    font-family: monospace;
+  }
+
+  .login-form {
+    padding: 20px 0 35px 0;
+  }
+
+  #login-style:hover {
+    background: none;
+    color: #3486eb;
+  }
