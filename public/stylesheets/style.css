@@ -107,7 +107,6 @@
     font-family: monospace;
     font-weight: bold;
     transition: color .1s;
-    margin-right: 60px;
   }
   
   .btn-no-style:hover {
@@ -146,14 +145,16 @@
   .comment {
     padding: 1%;
     margin-bottom: 1%;
+    background-color: lightgrey;
+    border-radius: 15px;
   }
   
-  .comment:nth-child(odd) {
+  /* .comment:nth-child(odd) {
     background-color: #fff5eb;
   }
-  
+   */
   .comment .meta {
-    font-size: 90%;
+    font-size: 85%;
     margin-bottom: .5%;
     opacity: .6;
   }
@@ -201,4 +202,9 @@
   #login-style:hover {
     background: none;
     color: #3486eb;
+  }
+  
+  .text {
+    font-family: monospace;
+    font-size: 20px;
   }

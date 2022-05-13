@@ -11,16 +11,20 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    Comment.create({
-        comment_text: req.body.comment_text,
-        user_id: req.body.user_id,
-        post_id: req.body.post_id
-    })
-    .then(dbCommentData => res.json(dbCommentData))
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    })
+    //only be able to post if logged in
+    if (req.session) {
+        Comment.create({
+            comment_text: req.body.comment_text,
+            //use id from session url
+            user_id: req.session.user_id,
+            post_id: req.body.post_id
+        })
+        .then(dbCommentData => res.json(dbCommentData))
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        })
+    }
 })
 
 router.delete('/:id', (req, res) => {
