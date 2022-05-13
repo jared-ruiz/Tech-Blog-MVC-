@@ -4,9 +4,12 @@ const router = require('express').Router();
 
 //require api routes folder for all api routes
 const apiRoutes = require('./api');
+const homeRoutes = require('./home-routes');
 
 //use all bundled api routes created in /api folder
 router.use('/api', apiRoutes);
+//handlebars home routes
+router.use('/', homeRoutes);
 
 //if call to route endpoint doedsnt exist
 //error out

@@ -1,0 +1,19 @@
+<ol class="post-list">
+    {{!-- every item in posts will be repeated within this each loop --}}
+    {{!-- it knows its working with objects so we add variable name for clarity ie: post.post_url --}}
+    {{#each posts as |post|}}
+    <li>
+        <article class="post">
+            <div class="title">
+                <a href="{{post.post_url}}" target="_blank">{{post.title}}</a>
+                <span>({{post.post_url}})</span>
+            </div>
+            <div class="meta">
+                {{post.created_at}}
+                |
+                <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
+            </div>
+        </article>
+    </li>
+    {{/each}}
+</ol>
