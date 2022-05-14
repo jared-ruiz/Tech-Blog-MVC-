@@ -63,9 +63,24 @@ GIVEN a CMS-style blog site
 
 ## Installation
 ---
+- Download repo from github, run "npm i" to install all dependencies, create a ".env" file and then add this code to the created file: 
+
+- DB_NAME='tech_blog_db'
+- DB_USER='root'
+- DB_PW=''
+- sess_secret=''
+
+---
+- Replace the "user and pw" fields with your respective username and password.
+- Add a personalized secret to the "sess_secrets field that will assist with sessions.
+- run "mysql -u root -p" to access your MySQL shell. run "source db/schema.sql;" to create the ecommerce_db database.
+- run "npm start" to start server and naviagte to your http://localhost:3001/login path to access the login and enter the site.
+- You will not be able to create, edit or delete posts or comments without logging in.
 
 ## Usage
 ---
+
+- This application serves as a very basic full stack website that handles user authetication, user session data, login and logout functionality, post and comment functionality and editing functionality. 
 
 ## License Information
 ---
@@ -78,9 +93,12 @@ GIVEN a CMS-style blog site
 
 ## Working Example of Project
 ---
-[Demo of Working Example - Google Drive Video]()
+[Demo of Working Example - Deployed Heroku URL]()
 
 
 ## Weekly Reflection
 ---
 
+- This week was the hardest week I have ever had. I was unable to sleep simply because I knew I had so much work to knock out before the due date. On top of a full stack project with my team, I had to completely make a different full stack project by myself. Luckily I had great references from the modules and people to bounce ideas off of so I managed to accomplish my goal. I am geninuely happy with my steady grasp of what is going on. I don't expect to memorize anything at this moment, simply because of the sheer amount of info and speed this bootcamp is putting me through, but I believe that after it is all said and done, I'll be able to take these experiences with me into a team enviornment and learn and meet the expectations desired of me. I just need to start my career and watch as my experience solidifies the foundation I cultivated here. This assignment and upcoming project marks the final stretch of my full stack web development journey. Here's to another week!
+
+-J
