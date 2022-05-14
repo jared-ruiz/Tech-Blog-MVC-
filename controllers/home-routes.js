@@ -37,6 +37,7 @@ router.get('/', (req, res) => {
         //const post will serialize the entire array as opposed to just one
         const posts = dbPostData.map(post => post.get({ plain: true }));
         res.render('homepage', {
+            //posts will be used in the partial alongside the handlebars info
             posts,
             loggedIn: req.session.loggedIn
         });
