@@ -93,7 +93,7 @@ GIVEN a CMS-style blog site
 
 ## Working Example of Project
 ---
-[Demo of Working Example - Deployed Heroku URL]()
+[Demo of Working Example - Deployed Heroku URL](https://obscure-atoll-45880.herokuapp.com/login)
 
 
 ## Weekly Reflection
