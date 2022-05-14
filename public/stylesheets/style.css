@@ -115,11 +115,11 @@
   }
   
   .delete-post-btn {
-    background-color: #d41414;
+    background-color: lightcoral;
   }
   
   .delete-post-btn:hover {
-    background-color: #ff643d;
+    background-color: #bb3e1f;
   }
   
   .post {
