@@ -1,0 +1,10 @@
+<ol class="post-list">
+    {{!-- every item in posts will be repeated within this each loop --}}
+    {{!-- it knows its working with objects so we add variable name for clarity ie: post.post_url --}}
+    {{#each posts as |post|}}
+    <li>
+        {{!-- pass name of partial and the object to pass through it --}}
+        {{> post-info post}}
+    </li>
+    {{/each}}
+</ol>

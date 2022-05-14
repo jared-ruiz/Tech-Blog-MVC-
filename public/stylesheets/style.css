@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: black;
+    background-color: lightpink;
+  }
+  
+  a {
+    text-decoration: none;
+    color: lightseagreen;
+    font-weight: bold;
+    transition: color .1s;
+    font-size: 20px;
+  }
+  
+  a:hover {
+    color: lightsalmon;
+  }
+  
+  button {
+    background-color: lightcoral;
+    border: 0;
+    padding: 1%;
+    color: white;
+    font-weight: bold;
+    transition: background-color .1s;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 16.5%
+  }
+  
+  button:hover {
+    background-color: lightseagreen;
+  }
+  
+  .post-list {
+    margin: 0;
+    padding: 0;
+  }
+  
+  textarea, input {
+    padding: .5%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  textarea:focus, input:focus {
+    outline: none;
+    border: 1px solid #3486eb;
+  }
+  
+  textarea {
+    min-width: 40%;
+    min-height: 100px;
+  }
+  
+  form > div {
+    margin-bottom: 2%;
+  }
+  
+  form label {
+    display: block;
+  }
+  
+  .wrapper {
+    width: 100%;
+    min-height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    border-bottom: 3px solid lightseagreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+  }
+  
+  header h1 {
+    font-size: 1em;
+  }
+  
+  main {
+    flex: 1;
+    padding: 2% 4%;
+    background-color: lightcyan;
+  }
+  
+  .btn-no-style {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: lightcoral;
+    font-size: 25px;
+    font-family: monospace;
+    font-weight: bold;
+    transition: color .1s;
+  }
+  
+  .btn-no-style:hover {
+    background: none;
+    color: lightseagreen;
+  }
+  
+  .delete-post-btn {
+    background-color: lightcoral;
+  }
+  
+  .delete-post-btn:hover {
+    background-color: #bb3e1f;
+  }
+  
+  .post {
+    margin-bottom: 2%;
+    line-height: 150%;
+  }
+  
+  .post .title span {
+    font-style: italic;
+    font-size: 90%;
+    color: #7d7d7d;
+  }
+  
+  .edit-link {
+    display: block;
+    margin: -1.5% 0 2% 0;
+  }
+  
+  .comment-form {
+    margin-bottom: 5%;
+  }
+  
+  .comment {
+    padding: 1%;
+    margin-bottom: 1%;
+    background-color: lightgrey;
+    border-radius: 15px;
+  }
+  
+  .comment .meta {
+    font-size: 85%;
+    margin-bottom: .5%;
+    opacity: .6;
+  }
+  
+  .new-post-form input {
+    width: 300px;
+  }
+  
+  .edit-post-form {
+    margin-bottom: 5%;
+  }
+  
+  footer {
+    border-top: 3px solid lightseagreen;
+    font-family: monospace;
+    color: lightcoral;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    font-size: 110%;
+  }
+
+  #title-style {
+    color: lightcoral;
+    font-size: 35px;
+    font-family: monospace;
+    text-decoration: underline;
+  }
+
+  #login-style {
+    color: lightcoral;
+    font-size: 25px;
+    font-family: monospace;
+  }
+
+  .login-form {
+    padding: 20px 0 35px 0;
+  }
+
+  #login-style:hover {
+    background: none;
+    color: #3486eb;
+  }
+  
+  .text {
+    font-family: monospace;
+    font-size: 20px;
+  }
+
+  #dashboard-style {
+    font-size: 25px;
+    color: lightcoral;
+    margin-right: 15px;
+    font-family: monospace;
+  }
+
+  h2 {
+    font-family: monospace;
+    font-size: 30px;
+  }
+
+  #dashboard-post-title {
+    font-family: monospace;
+  }
+
+  #dashboard-style:hover {
+    color: lightseagreen;
+  }
+
+  #dashboard-post-link {
+    font-family: monospace;
+  }
