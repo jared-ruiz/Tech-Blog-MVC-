@@ -47,7 +47,7 @@ async function loginFormHandler(event) {
 
         if (response.ok) {
             //if response okay, redirect to root path (dashboard)
-            document.location.replace('/');
+            document.location.replace('/dashboard');
         }
         else {
             alert(response.statusText);

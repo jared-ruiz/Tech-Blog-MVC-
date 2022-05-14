@@ -37,7 +37,7 @@
   }
   
   button:hover {
-    background-color: #3486eb;
+    background-color: lightseagreen;
   }
   
   .post-list {
@@ -111,7 +111,7 @@
   
   .btn-no-style:hover {
     background: none;
-    color: #3486eb;
+    color: lightseagreen;
   }
   
   .delete-post-btn {
@@ -149,10 +149,6 @@
     border-radius: 15px;
   }
   
-  /* .comment:nth-child(odd) {
-    background-color: #fff5eb;
-  }
-   */
   .comment .meta {
     font-size: 85%;
     margin-bottom: .5%;
@@ -185,10 +181,6 @@
     text-decoration: underline;
   }
 
-  /* #blog-title {
-      color: lightseagreen
-  } */
-
   #login-style {
     color: lightcoral;
     font-size: 25px;
@@ -207,4 +199,28 @@
   .text {
     font-family: monospace;
     font-size: 20px;
+  }
+
+  #dashboard-style {
+    font-size: 25px;
+    color: lightcoral;
+    margin-right: 15px;
+    font-family: monospace;
+  }
+
+  h2 {
+    font-family: monospace;
+    font-size: 30px;
+  }
+
+  #dashboard-post-title {
+    font-family: monospace;
+  }
+
+  #dashboard-style:hover {
+    color: lightseagreen;
+  }
+
+  #dashboard-post-link {
+    font-family: monospace;
   }
